@@ -17,9 +17,14 @@ pessoas_df.rename(columns={ # renomiando as colunas [com return original]
     'Peso': 'Weight',
     'Humano': 'Human'
 }, inplace=True)
-
 # print(pessoas_df)
 
 pessoas_df.columns = ['NAME', 'AGE', 'WEIGHT', 'HUMAN'] # RENOMIANDO DE UMA VEZ, PARA TABELAS COM POUCAS COLUNAS
+# print(pessoas_df)
 
+pessoas_df_copy = pessoas_df['AGE'].copy()
+# print(pessoas_df_copy)
+
+pessoas_df['AGE'] = 30 #atribui valor constante na coluna 'AGE'
+pessoas_df['AGE'] = pessoas_df_copy #valtando para os valores originais
 print(pessoas_df)
